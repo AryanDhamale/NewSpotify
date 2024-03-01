@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="side-bar">
+            <div class="nav">
+               <div class="nav-option one">
+                <i class="fa-solid fa-house"></i>
+                 <a href="#">Home</a>
+                 <i class="fa-solid fa-circle-xmark" id="cross"></i>
+               </div>
+               <div class="nav-option" id="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#">Search</a>
+               </div>
+            </div>
+
+            <div class="library">
+                <div class="options">
+                    <div class="lib-options nav-option">
+                        <img src="./assets/library_icon.png" alt="image">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-plus pointer"></i>
+                        <i class="fa-solid fa-arrow-right pointer"></i>
+                    </div>
+                </div>
+
+                <div class="lib-boxes" id="lib-boxes-overflow">
+                      <div class="lib-box-1">
+                        <i class="fa-solid fa-magnifying-glass pointer"></i>
+                         <div class="lib-box-recent">Recent &nbsp; &nbsp;<i class="fa-solid fa-list pointer"></i></div>
+                      </div>
+                      <br>
+            
+                      <div class="lib-box-2">
+                        <i class="fa-solid fa-xmark"></i>
+                         <button type="button" class="badge pointer ">Songs</button> 
+                      </div>
+                      <br>
+                      <!-- <div class="lib-box pointer">
+                        <img class="lib-box-img" src="https://i.scdn.co/image/ab67706c0000da84f5497e6777f90edbc4112dcb" alt="img">
+                        <div class="lib-box-para">
+                            <p class="para">Manga & Anime</p>
+                            <p class="para-bottom">plalist. Dynasty Music</p>
+                        </div>
+                      </div> -->
+                      <div class="lib-box pointer">
+                        <a href="#j-fla-container" style="text-decoration: none;"><img class="lib-box-img" src="https://cdns-images.dzcdn.net/images/artist/bf08bb807733bf1537ce6f278cd052c1/500x500.jpg" alt="">
+                         <div class="lib-box-para">
+                            <p class="para">J.fla</p>
+                            <p class="para-bottom">Artist</p>
+                        </a>
+                        </div>
+                      </div>
+                      <div class="lib-box">
+                         <a href="#other-f-song" style="text-decoration: none;"><img class="lib-box-img" src="https://i1.sndcdn.com/artworks-AZxbsfTmF8l64GI1-fLn6Gg-t500x500.jpg" alt="">
+                         <div class="lib-box-para">
+                            <p class="para">Other Your Favorite Songs</p>
+                            <p class="para-bottom">Artist</p>
+                         </a>  
+                        </div> 
+                      </div>  
+                      <div class="lib-box pointer">
+                        <a href="#bts-container" style="text-decoration: none;"><img class="lib-box-img" src="https://i0.wp.com/heyhallyu.com/wp-content/uploads/2023/09/242016.jpg?fit=2500%2C2500&ssl=1" alt="img">
+                          <div class="lib-box-para">
+                            <p class="para">BTS</p>
+                            <p class="para-bottom">Artist</p>
+                        </a>
+                          </div>
+                      </div>
+    
+                      <div class="lib-box pointer"> 
+                        <a href="#denmark-container" style="text-decoration: none;"><img class="lib-box-img" src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_default.jpg" alt="img">
+                          <div class="lib-box-para">
+                          <p class="para">DENMARK</p>
+                          <p class="para-bottom">Artist</p>
+                        </a>      
+                        </div>
+
+                       </div>
+                       <div class="footer" id="Design">
+                        <div class="footer-spacing"></div>
+                        <h5 class="Design-name">Design By <b>SHAO</b>&trade;</h5>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="search-engin">
+              <div class="container">
+                 <form action="./index.html">
+                  <i class="fa-solid fa-magnifying-glass pointer"></i>
+                  <input type="text" id="search-box" placeholder="Search" onkeyup="search_result()"/>
+                 </form>
+              </div>
+            </div>
+       
+            <div class="sticky-nav">
+                 <div class="sticky-nav-icon">
+                    <i class="fa-solid fa-bars icon burger" id="hangburder"></i>
+                    <i class="fa-solid fa-magnifying-glass pointer" id="search-button-two"></i>
+                    <img src="./assets/backward_icon.png" alt="image" class="pointer">
+                    <img src="./assets/forward_icon.png" class="hidden pointer" alt="image">
+                 </div>
+                <div class="sticky-nav-button">
+                    <button type="button" class="badge hidden pointer">Explore premium</button>
+                    <button type="button" class="badge stick-black pointer pointer-color"><i class="fa-solid fa-circle-down"></i>install App</button>
+                    <i class="fa-solid fa-bell pointer"></i>
+                    <i class="fa-regular fa-user pointer"></i>
+                </div>
+               </div>
+                  <div class="card-container-big display-none" id="j.fla">
+                     <img src="https://i.scdn.co/image/ab67706c0000da84f5497e6777f90edbc4112dcb" alt="img" class="card-container-big-img">
+                    <div class="card-container-big-subdive-1">
+                     <p class="card-container-big-para">Playlists</p>
+                     <h2 class="changed-name">Manga & Anime Slowed & Reverb</h2>
+                      <div class="card-container-big-subdive-2">
+                       <img src="https://i.scdn.co/image/ab67616d0000b27398f5e214321769f1b8b75361" alt="img" class="music-img">
+                       <h3 class="music-head">Dynamic Music | Made by Tejas.</h3>
+                     </div>
+                    </div> 
+                  </div>
+                 <h2 id="denmark-container">Background Music</h2>
+                 <div class="card-container">
+                     <div class="card pointer" id="Background">
+                      <a href="#j.fla"><img class="card-img" src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_default.jpg" alt="image"></a>
+                        <p class="card-title" >Top-50 global</p>
+                        <p class="card-info">Your daily update for most played trackes...</p>
+                     </div>
+                 </div>
+                <h2  id="j-fla-container">Popular Released by J.Fla</h2>
+                <div class="card-container">
+
+                  <div class="card pointer" id="Rose">
+                   <a href="#j.fla"><img class="card-img" src="https://i.scdn.co/image/ab67616d0000b27359280306a49b3b7f13124a31" alt="image"></a>
+                   <p class="card-title" >Rose</p>
+                   <p class="card-info">2018 . Album</p>
+                  </div>
+
+                  <div class="card pointer" id="Momories">
+                   <a href="#j.fla"><img class="card-img" src="https://i.scdn.co/image/ab67616d0000b27306d111e569f2b9e1179d9ad6" alt="image"></a>
+                   <p class="card-title" >Momories</p>
+                   <p class="card-info">2023 . Album</p>
+                  </div> 
+
+                  <div class="card pointer" id="Natural">
+                    <a href="#j.fla"><img class="card-img" src="https://i.scdn.co/image/ab67616d0000b27397f10e853186a6cbf1fd8473" alt="image"></a>
+                    <p class="card-title" >Natural</p>
+                    <p class="card-info">2018 . Album</p>
+                  </div>
+
+                  <div class="card pointer" id="Believer">
+                    <a href="#j.fla"><img class="card-img" src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/90/5c/da/905cda7f-2a83-cabe-c2eb-b680e770a276/cover.jpg/400x400cc.jpg" alt="image"></a>
+                    <p class="card-title" >Believer</p>
+                    <p class="card-info">2018 . Album</p>
+                  </div>
+
+                  <div class="card pointer" id="Stay">
+                    <a href="#j.fla"><img class="card-img" src="https://images.genius.com/56cf42919333a7b42ec8b05aeb3dff44.1000x1000x1.jpg" alt="image"></a>
+                    <p class="card-title" >Stay</p>
+                    <p class="card-info">2013 . Album</p>
+                  </div>
+
+                  <div class="card pointer" id="Closer">
+                    <a href="#j.fla"><img class="card-img" src="https://cdns-images.dzcdn.net/images/artist/bf08bb807733bf1537ce6f278cd052c1/500x500.jpg" alt="image"></a>
+                    <p class="card-title" >Closer</p>
+                    <p class="card-info">2018 . Album</p>
+                  </div>
+
+                  <div class="card pointer" id="Maroon_5">
+                    <a href="#j.fla"><img class="card-img" src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evNZY5NHq-default.jpg" alt="image"></a>
+                    <p class="card-title" >Maroon 5</p>
+                    <p class="card-info">2015 . Album</p>
+                 </div>
+
+                 <div class="card pointer" id="The_ocean">
+                   <a href="#j.fla"><img class="card-img" src="https://i1.sndcdn.com/avatars-000550760208-hsm3cl-t500x500.jpg" alt="image"></a>
+                   <p class="card-title" >The ocean</p>
+                   <p class="card-info">J.fla</p>
+                 </div>
+
+                 <div class="card pointer" id="shape_of_you">
+                  <a href="#j.fla"><img class="card-img" src="https://avatar-ex-swe.nixcdn.com/song/2017/12/09/1/f/7/3/1512799083839_640.jpg" alt="image"></a>
+                  <p class="card-title" >Shape of You</p>
+                  <p class="card-info">J.fla</p>
+                 </div>
+                </div> 
+
+                 <h2 id="other-f-song">Other Your Favorite Songs</h2>
+                 <div class="card-container">
+                  <div class="card pointer" id="Way Down We Go">
+                    <a href="#j.fla"><img class="card-img" src="https://i1.sndcdn.com/artworks-AZxbsfTmF8l64GI1-fLn6Gg-t500x500.jpg" alt="image"></a>
+                    <p class="card-title" >Way Down We Go</p>
+                    <p class="card-info">KALEO</p>
+                  </div>
+
+                  <div class="card pointer" id="Vergil">
+                    <a href="#j.fla"><img class="card-img" src="https://vsthemes.org/uploads/posts/workshop/282199778763fdc58f436c0834797500.webp" alt="image"></a>
+                    <p class="card-title" >Show me your motivation</p>
+                    <p class="card-info">VERGIL</p>
+                  </div>
+                 </div>
+                
+
+                 <h2 id="bts-container">BTS - Most populer Songs</h2>
+                 <div class="card-container">
+                  <div class="card pointer" id="BTS">
+                    <a href="#j.fla"><img class="card-img" src="https://i0.wp.com/heyhallyu.com/wp-content/uploads/2023/09/242016.jpg?fit=2500%2C2500&ssl=1" alt="image"></a>
+                    <p class="card-title" >BTS ALL SONGS</p>
+                    <p class="card-info">BTS ARMY</p>
+                   </div>
+                 </div>
+                 
+                 <h2>Indian Songs</h2>
+                <div class="card-container">
+        
+                  <div class="card pointer" id="Khuda Hafiz">
+                    <a href="#j.fla"><img class="card-img" src="https://c.saavncdn.com/086/Khuda-Haafiz-Hindi-2020-20230620104621-500x500.jpg" alt="image"></a>
+                    <p class="card-title" >Khuda Haafiz</p>
+                    <p class="card-info">Vishal Dadlani</p>
+                   </div>
+                   
+                   <div class="card pointer" id="YAALI">
+                    <a href="#j.fla"><img class="card-img" src="https://i1.sndcdn.com/artworks-0brduk0iNyz0bdLY-oNDoyw-t500x500.jpg" alt="image"></a>
+                    <p class="card-title" >YA ALI</p>
+                    <p class="card-info">Unknown</p>
+                   </div>
+
+                </div>
+
+                
+              <div class="footer">
+                <div class="footer-spacing"></div>
+              </div>
+        </div>
+
+
+        <div class="music-player">
+          <!-- Music player -->
+          <div class="album">
+             <img src="https://i.scdn.co/image/ab67616d0000b273fa87f308f01cf54f2332e4ff" alt="image" class="pointer">
+             <div class="album-para">
+              <p class="album-top-para pointer">Naruto Main Theme (From"Naruto")</p>
+              <p class="album-bottom-para pointer">BiBi Bluebired</p>
+             </div>
+              <i class="fa-regular fa-heart pointer heart"></i>
+          </div>
+
+          <div class="player">
+               <div class="player-controlers">
+                 <img src="./assets/player_icon1.png" alt="image" class="player-controlers-icons pointer shuffle">
+                 <i class="fa-solid fa-backward" id="backword"></i>
+                 <i class="fa-regular fa-circle-play" id="play"></i>
+                 <i class="fa-solid fa-forward" id="forword"></i>
+                 <img src="./assets/player_icon5.png" alt="image" class="player-controlers-icons pointer loop">
+                 <div class="loop-notification">Loop activate</div>
+               </div>
+               <div class="player-progress-bar">
+                 <span class="start-val">0:00</span>
+                 <input type="range" min="0" max="100" value="100" step="1" class="player-progress-bar-range music-range">
+                 <span class="end-val">3:45</span>      
+               </div>
+          </div>
+          <div class="controles">
+             <img src="./music-spaker.png" alt="img" class="controlers-icon"/>
+             <i class="fa-sharp fa-solid fa-volume-high controles-volume"></i>
+            <input type="range" min="0" max="100" step="1" class="player-progress-bar-range controles-range" value="100"/>
+          </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./data.js"></script>
+</body>
+</html>
